@@ -27,4 +27,4 @@ namespace StaticClass
             return this._Pi * this._radius * this._radius;
         }
     }
-}
+}--- testing
