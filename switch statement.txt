@@ -1,0 +1,85 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace switch_statement
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int totalcost = 0;
+            start:
+
+            Console.WriteLine(" select your choice to drink \n 1. small \n 2.Medium \n 3.Large ");
+            int usernumber = int.Parse(Console.ReadLine());
+            switch (usernumber)
+            {
+                /* case 10 :
+                     Console.WriteLine(usernumber);
+                     break;
+                 case 20:
+                     Console.WriteLine( usernumber);
+                     break;
+                 default:
+                     Console.WriteLine( " enter a valid number");
+                     break;*/
+
+                /*case 10:
+                case 20:
+                    Console.WriteLine(" user entered number = {0}" , usernumber);
+                    break;
+
+                default:
+                    Console.WriteLine(" enter a valid number");
+                    break;*/
+
+                case 1:
+                    totalcost += 1;
+                    break;
+
+                case 2:
+                    totalcost += 2;
+                    break;
+
+                case 3:
+                    totalcost += 3;
+                    break;
+
+                default:
+                    Console.WriteLine(" enter a valid Choice");
+                    break;
+
+             }
+            Console.WriteLine(" Total bill is {0}", totalcost);
+
+            decide:
+            Console.WriteLine("do you want to Continue Shopping  - Yes or NO");
+            int userchoice = int.Parse(Console.ReadLine());
+
+            switch(userchoice)
+            {
+                case 1:
+                    goto start;
+                case 2:
+                    break;
+                default:
+                    Console.WriteLine(" your choice is in valid please select valid option");
+                    goto decide;
+                    
+
+
+            }
+            Console.WriteLine(" thank you for Shopping" + " your total bill is {0}" , totalcost);
+
+
+
+
+
+        }
+    }
+ }
+
